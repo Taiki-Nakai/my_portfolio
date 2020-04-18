@@ -1,0 +1,311 @@
+/*-----------------------------------------------------------------------------------------------
+base
+--------------------------------------------------------------------------------------------------*/
+
+@charset "UTF-8" ;
+
+html {
+    font-size: 62.5%;
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+*{
+    font-family:  'Dosis', "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", cursive;
+}
+/*---------------------------------------------------------------------------
+header
+-----------------------------------------------------------------------------*/
+.header {
+    width: 100%;
+    text-align: center;
+    z-index: 99;
+    position: fixed;
+    left: 0;
+    right: 0;
+    display: block;
+}
+.header dl, .header dd a {
+    color: #aaaaaa;
+}
+.header dl {
+    letter-spacing: 1px;
+    margin: 0 0 0 -550px;
+    position: absolute;
+    left: 50%;
+    top: 10px;
+    width: 1096px;
+}
+.header dt {
+    float: left;
+}
+.header dd {
+    float: right;
+}
+.header a {
+    margin-left: 5px;
+}
+.hamburg {
+    display: none;
+}
+@media screen and (max-width: 480px) {
+    .menu-pc {
+        display: none;
+    }
+    .hamburg {
+        display: block;
+        margin: 10px;
+    }
+    ul {
+        list-style: none;
+        margin-right: 80px;
+        line-height: 50px;
+    }
+    .list-text {
+        font-size: 3rem;
+    }
+    .list-text a{
+        color: black;
+    }
+    .list-text a:hover {
+        color: #aaaaaa;
+    }
+    /*inputタグのチェックボックス非表示*/
+ 
+    #input {
+	    display: none;
+    }   
+    
+    /*3本線を作る*/
+ 
+    .line1,.line2,.line3 {
+	    width: 40px;
+	    height: 3px;
+	    background-color: black;
+	    margin: 6px;
+    }
+ 
+    /*メニューのデザイン*/
+ 
+    #content {
+	    background-color: #f9f9f9;
+	    width: 100%;
+	    height: 100%;
+        transform: translateX(-120%); /*左側の奥の奥に埋めておく*/
+        position: fixed;
+        z-index: 999;
+        transition: .3s ease-in-out;
+    }
+ 
+    /*チェックが入ったら見せる*/
+ 
+    #input:checked ~ #content {
+	    transform: translatex(0px);　/*通常値に戻す*/
+    }
+
+}    
+/*---------------------------------------------------------------------------
+title
+----------------------------------------------------------------------------*/
+.title{
+    width: 100%;
+    text-align: center;
+    padding: 300px 0px 300px 0px;
+    font-size: 3.0rem;
+    letter-spacing: 3px;
+    background-color: #ffffff;
+}
+.title h1 {
+    display: inline;
+    font-size: 100%;
+    font-weight: normal;
+}
+.title p {
+    margin-top: -1px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #aaaaaa;
+}
+@media screen and (max-width: 480px){
+    .title h1 {
+        margin: 0 auto;
+    }
+    .title p {
+        margin: 0 auto;
+    }
+}
+
+/*------------------------------------------------------------------------------
+works
+-----------------------------------------------------------------------------*/
+.works {
+    height: 500px;
+    padding-top: 30px;
+    padding-bottom: 100px;
+    width: 100%;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+.works .heading {
+    font-size:3.0rem;
+    font-weight: normal;
+    letter-spacing: 3px;
+}
+.works p {
+    text-align: center;
+    font-size: 150%;
+    font-weight: bold;
+    margin: 200px;
+}
+@media screen and (max-width: 480px){
+    .works .heading {
+        margin: 0 auto;
+    }
+    .works p {
+        margin: 0 auto;
+        margin-top: 150px;
+    }
+}
+    
+
+/*------------------------------------------------------------------------------
+service
+-----------------------------------------------------------------------------*/
+.service {
+    text-align: center;
+    height: 300px;
+}
+.service .heading {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size:3.0rem;
+    font-weight: normal;
+    letter-spacing: 3px;
+}
+.service-icon {
+    font-size: 5rem;
+}
+.service-titile {
+    font-size: 1.4rem;
+    letter-spacing: 3px;
+    padding: 15px;
+}
+.service-text {
+    font-size: 1.4rem;
+    line-height: 20px;
+}
+@media screen and (max-width: 480px){
+    .service .heading {
+        margin: 0 auto;
+    }
+    .service-box {
+        margin: 0 auto;
+    }
+}
+
+/*----------------------------------------------------------------------------
+profile
+----------------------------------------------------------------------------*/
+.profile {
+    background-color: #f9f9f9;
+    text-align: center;
+    font-size: 1.4rem;
+    width: 100%;
+    height: 545px;
+}
+.profile .heading {
+    padding-top: 40px;
+    font-size:3.0rem;
+    font-weight: normal;
+    letter-spacing: 3px;
+}
+.left-item { 
+    float: left;
+    margin-left: 270px;
+    margin-top: 60px;
+}
+.profile-photo {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+}
+.my-name {
+    margin-top: 20px;
+}
+.right-item {
+    float: right;
+    text-align: left;
+    margin-right: 300px;
+    margin-top: 20px;
+    line-height: 2;
+    letter-spacing: 1;
+    margin-top: 60px;
+}
+.contact {
+    float: right;
+    text-align: left;
+    margin: 150px 100px 50px 100px;
+    line-height: 2;
+    letter-spacing: 1;
+}
+.contact a {
+    color: red;
+}
+@media screen and (max-width: 480px){
+    .profile {
+        height: 700px;
+        margin: 0 auto;
+    }
+    .profile .heading {
+        margin: 0 auto;
+        margin-bottom: 30px;
+    }
+    .left-item {
+        margin: unset;
+        float: unset;
+        
+    }
+    .right-item {
+        margin: 0 auto;
+        text-align: center;
+        float: unset;
+        margin-top: 40px;
+    }
+    .contact {
+        margin: unset;
+        float: unset;
+        text-align: center;
+        margin-top: 80px;
+    }
+}    
+/*----------------------------------------------------------------------------
+footer
+-----------------------------------------------------------------------------*/
+.footer {
+    padding: 40px 0 40px 0;
+}
+.footer dd {
+    float: left;
+    margin: -30px 0 0 80px;
+}
+.footer dd a {
+    margin-left: 5px;
+    color: #aaaaaa;
+}
+.footer-copyright {
+    float: right;
+    margin: 10px 90px 15px 0;
+}
+@media screen and (max-width: 480px){
+    .footer dd {
+    margin: -25px 0 0 120px;
+    }
+    .footer .footer-copyright {
+        margin: 5px 145px 15px 0;
+    }
+}
